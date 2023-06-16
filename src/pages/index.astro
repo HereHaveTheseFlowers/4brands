@@ -1,8 +1,75 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
 ---
 
 <Layout>
 	<main>
+		<section class="menu">
+			<div class="menu__container">
+				<Button>о студии</Button>
+				<Button>правила</Button>
+				<Button>контакты</Button>
+				<br>
+				<Button>как нас найти</Button>
+			</div>
+		</section>
+		<section class="showcase">
+			<div class="showcase__logo">
+				For<br>
+				Brands<br>
+				Studio<br>
+			</div>
+		</section>
+		<footer class="footer">
+			<span class="footer__book">ЗАБРОНИРОВАТЬ</span>
+			<div class="footer__line"></div>
+		</footer>
 	</main>
 </Layout>
+
+<style lang="sass">
+	main
+		display: flex
+		position: relative
+	
+	.menu
+		width: 30%
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+	
+	.menu__container
+		display: flex
+		flex-direction: column
+		align-items: flex-end
+	
+	.showcase
+		width: 70%
+
+	.showcase__logo
+		font-size: 7vw
+		margin: 4vw 0 0 10vw
+
+	.footer
+		position: absolute
+		bottom: 0
+		width: 100%
+		display: flex
+		align-items: center
+
+
+	.footer__line
+		display: block
+		width: 100%
+		bottom: 50%
+		border-bottom: solid 2px black
+
+	.footer__book
+		background: white
+		font-size: 32px
+		font-style: italic
+		padding: 0 6px
+
+</style>
